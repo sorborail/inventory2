@@ -12,7 +12,7 @@ public class NetworkAvailabilitySpec extends AbstractSpecification<Equipment> {
   private String name;
   private int cidr;
 
-  public NetworkAvailabilitySpec(Network network){
+  public NetworkAvailabilitySpec(Network network) {
     this.address = network.getNetworkAddress();
     this.name = network.getNetworkName();
     this.cidr = network.getNetworkCidr();
@@ -20,7 +20,7 @@ public class NetworkAvailabilitySpec extends AbstractSpecification<Equipment> {
 
   @Override
   public boolean isSatisfiedBy(Equipment switchNetworks){
-    return switchNetworks!=null && isNetworkAvailable(switchNetworks);
+    return switchNetworks != null && isNetworkAvailable(switchNetworks);
   }
 
   @Override
@@ -29,7 +29,7 @@ public class NetworkAvailabilitySpec extends AbstractSpecification<Equipment> {
       throw new GenericSpecificationException("This network already exists");
   }
 
-  private boolean isNetworkAvailable(Equipment switchNetworks){
+  private boolean isNetworkAvailable(Equipment switchNetworks) {
     var availability = true;
     for (Network network : ((Switch)switchNetworks).getSwitchNetworks()) {
       if(network.getNetworkAddress().equals(address) &&

@@ -10,7 +10,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class RouterService {
-  public static List<Router> filterAndRetrieveRouter(List<Router> routers, Predicate<Equipment> routerPredicate){
+  public static List<Router> filterAndRetrieveRouter(List<Router> routers, Predicate<Equipment> routerPredicate) {
     return routers
         .stream()
         .filter(routerPredicate)

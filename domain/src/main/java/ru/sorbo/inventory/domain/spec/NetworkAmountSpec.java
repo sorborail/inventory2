@@ -10,8 +10,7 @@ public class NetworkAmountSpec extends AbstractSpecification<Equipment> {
 
   @Override
   public boolean isSatisfiedBy(Equipment switchNetwork) {
-    return ((Switch)switchNetwork).getSwitchNetworks().size()
-        <=MAXIMUM_ALLOWED_NETWORKS;
+    return ((Switch)switchNetwork).getSwitchNetworks().size() <=MAXIMUM_ALLOWED_NETWORKS;
   }
 
   @Override

@@ -7,6 +7,7 @@ import java.util.function.Predicate;
 
 @Getter
 public abstract class Router extends Equipment {
+
   protected final RouterType routerType;
 
   public static Predicate<Equipment> getRouterTypePredicate(RouterType routerType) {
@@ -18,6 +19,7 @@ public abstract class Router extends Equipment {
   }
 
   public static Predicate<Equipment> getCountryPredicate(Location location) {
+
     return p -> p.location.getCountry().equals(location.getCountry());
   }
 

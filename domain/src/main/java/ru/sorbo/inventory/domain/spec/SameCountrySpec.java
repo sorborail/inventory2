@@ -17,11 +17,8 @@ public class SameCountrySpec extends AbstractSpecification<Equipment> {
     if(anyEquipment instanceof CoreRouter) {
       return true;
     } else if (anyEquipment != null && this.equipment != null) {
-      return this.equipment.getLocation().getCountry().
-          equals(anyEquipment.getLocation().getCountry());
-    } else{
-      return false;
-    }
+      return this.equipment.getLocation().getCountry().equals(anyEquipment.getLocation().getCountry());
+    } else return false;
   }
 
   @Override

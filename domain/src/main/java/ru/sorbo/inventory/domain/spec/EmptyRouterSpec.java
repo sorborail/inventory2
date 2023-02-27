@@ -7,7 +7,7 @@ import ru.sorbo.inventory.domain.spec.shared.AbstractSpecification;
 public class EmptyRouterSpec extends AbstractSpecification<CoreRouter> {
   @Override
   public boolean isSatisfiedBy(CoreRouter coreRouter) {
-    return coreRouter.getRouters()==null|| coreRouter.getRouters().isEmpty();
+    return coreRouter.getRouters() == null|| coreRouter.getRouters().isEmpty();
   }
 
   @Override

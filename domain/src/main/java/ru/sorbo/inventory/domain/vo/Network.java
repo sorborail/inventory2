@@ -16,7 +16,7 @@ public class Network {
   private String networkName;
   private int networkCidr;
 
-  public static Predicate<Network> getNetworkProtocolPredicate(Protocol protocol){
+  public static Predicate<Network> getNetworkProtocolPredicate(Protocol protocol) {
     return s -> s.getNetworkAddress().getProtocol().equals(protocol);
   }
 
@@ -24,8 +24,8 @@ public class Network {
     return s -> s.getNetworkName().equals(name);
   }
 
-  public Network(IPAddress networkAddress, String networkName, int networkCidr){
-    if(networkCidr <1 || networkCidr>32){
+  public Network(IPAddress networkAddress, String networkName, int networkCidr) {
+    if(networkCidr <1 || networkCidr>32) {
       throw new IllegalArgumentException("Invalid CIDR value");
     }
     this.networkAddress = networkAddress;

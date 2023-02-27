@@ -33,7 +33,8 @@ public class Switch extends Equipment {
   }
 
   public static Predicate<Switch> getSwitchTypePredicate(SwitchType switchType) {
-      return s -> s.switchType .equals(switchType);
+
+    return s -> s.switchType .equals(switchType);
   }
 
   public boolean addNetworkToSwitch(Network network) {
@@ -49,6 +50,10 @@ public class Switch extends Equipment {
   }
 
   public boolean removeNetworkFromSwitch(Network network) {
-      return this.switchNetworks.remove(network);
+    // здесь нужно добавить правило
+    /* var availabilitySpec = new NetworkAvailabilitySpec(network);
+    availabilitySpec.check(this); */
+
+    return this.switchNetworks.remove(network);
   }
 }

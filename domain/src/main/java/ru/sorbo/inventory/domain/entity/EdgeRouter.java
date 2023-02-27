@@ -19,7 +19,9 @@ public class EdgeRouter extends Router {
 	private Map<Identifier, Switch> switches;
 
   @Builder
-  public EdgeRouter(Identifier id, Vendor vendor, Model model, IPAddress ip, Location location, RouterType routerType, Map<Identifier, Switch> switches) {
+  public EdgeRouter(Identifier id, Vendor vendor, Model model,
+                    IPAddress ip, Location location, RouterType routerType,
+                    Map<Identifier, Switch> switches) {
     super(id, vendor, model, ip, location, routerType);
     this.switches = switches;
   }

@@ -50,7 +50,7 @@ public class RouterAdd extends ApplicationTestData {
     assertNotNull(coreRouter);
   }
   @Тогда("Я добавляю внутренний роутер к основному роутеру")
-  public void add_edge_to_core_router(){
+  public void add_edge_to_core_router() {
     var actualEdgeId = edgeRouter.getId();
     Mockito.when(routerManagementOutputPortMock.persistRouter(any())).thenReturn(coreRouter);
     var routerWithEdge = (CoreRouter) this.routerManagementUseCase.addRouterToCoreRouter(edgeRouter, coreRouter);
